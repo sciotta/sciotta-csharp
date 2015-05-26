@@ -1,0 +1,4 @@
+*.suo
+Sciotta.Web/bin
+Sciotta.Web/obj
+packages

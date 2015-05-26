@@ -1,0 +1,26 @@
+<h2>Documentos</h2>
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Emitente</th>
+            <th colspan="2">Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="documento in documentos">
+            <td>{{documento.id}}</td>
+            <td>{{documento.titulo}}</td>
+            <td>{{documento.emitenteNome}}</td>
+            <td>{{documento.dataCriado}}</td>
+            <td>
+                <a data-ng-href="#/documentos/{{documento.id}}">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

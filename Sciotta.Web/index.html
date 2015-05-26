@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="sciottaApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sciotta</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="Scripts/3rd/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Scripts/3rd/loading-bar/loading-bar.min.css" />
+    <link rel="stylesheet" href="Styles/sciotta.css" />
+</head>
+
+<body data-ng-controller="PageController">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sciotta</a>
+            <div class="collapse navbar-collapse pull-left">
+                <ul class="nav navbar-nav">
+                    <li data-ng-class="actualPath == '/' ? 'active' : ''">
+                        <a data-ng-href="#">Home</a>
+                    </li>
+                    <li data-ng-class="actualPath == '/documentos' ? 'active' : ''">
+                        <a data-ng-href="#/documentos">Documentos</a>
+                    </li>
+                    <li data-ng-class="actualPath == '/about' ? 'active' : ''">
+                        <a data-ng-href="#/about">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a data-ng-click="logout()"><i class="glyphicon glyphicon-off"></i>
+                        Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-body" class="container">
+        <div data-ng-view=""></div>
+    </div>
+
+    <div id="page-footer" class="container">
+        <p class="text-center">Desenvolvido na <a href="http://komododev.com">KomodoDev TEAM</a></p>
+    </div>
+
+    <script src="Scripts/3rd/es5-shim.min.js"></script>
+    <script src="Scripts/3rd/angular.min.js"></script>
+    <script src="Scripts/3rd/angular-resource.min.js"></script>
+    <script src="Scripts/3rd/angular-route.min.js"></script>
+    <script src="Scripts/3rd/angular-local-storage.min.js"></script>
+    <script src="Scripts/3rd/loading-bar/loading-bar.min.js"></script>
+
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/services/auth/authInterceptorService.js"></script>
+    <script src="Scripts/app/services/auth/authService.js"></script>
+    <script src="Scripts/app/services/documentoService.js"></script>
+
+    <script src="Scripts/app/controllers/PageController.js"></script>
+    <script src="Scripts/app/controllers/AuthenticateController.js"></script>
+    <script src="Scripts/app/controllers/AboutController.js"></script>
+    <script src="Scripts/app/controllers/MainController.js"></script>
+    <script src="Scripts/app/controllers/documentos/DocumentoListController.js"></script>
+    <script src="Scripts/app/controllers/documentos/DocumentoDetailsController.js"></script>
+</body>
+</html>
