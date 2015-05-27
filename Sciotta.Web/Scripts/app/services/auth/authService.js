@@ -6,7 +6,7 @@ angular.module('sciottaApp').factory('authService', [
     'localStorageService',
     function ($http, $q, localStorageService)
     {
-        var serviceBase = 'http://localhost:19395';
+        var serviceBase = '';
 
         var _authentication =  {
             isAuth: false,
